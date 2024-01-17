@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    
+
+<script>
+/*
+    const product={
+        //name and price are the property 
+        name:'socks',
+        price:1090
+    };
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+    
+    //updating the property value
+    product.name='Cotton socks';
+    console.log(product);
+    
+    //adding new property into the object
+    product.newProperty='Iam new one';
+    console.log(product);
+ 
+    //deletimg the property in the object
+    delete product.newProperty;
+    console.log(product);
+
+    */
+
+    const product2 ={
+
+        name:'shirt',
+        'delivery-time' : '1 day',
+
+        //nested object
+        rating:{
+          stars:4.5,
+          count:87
+        },
+
+        //function inside the oject
+        fun: function function1()
+        {
+            console.log('Function inside the object.')
+        }
+    };
+
+    console.log(product2);
+
+    //using dot notation
+    console.log(product2.name);
+
+    //using bracket notation
+    console.log(product2['name']);
+     
+    //when you have this kind of property like this then we have to bracket notation
+    console.log(product2['delivery-time']);
+
+     //displaying the nested object property value 
+    console.log(product2.rating.count);
+
+     //displaying the funtion value inside the object
+     product2.fun();
+
+     //JSON- JAVASCRIPT OBJECT NOTATION
+     //convert the javascript object to JSON format 
+     console.log(JSON.stringify(product2));
+
+    
+     const jsonString = JSON.stringify(product2);
+      //convert the JSON string back to javascript object 
+     console.log(JSON.parse(jsonString))
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
