@@ -8,9 +8,26 @@
 <body>
     
  <button>HELLO</button>
-    <script>
-        
 
+ <button class="btn2">Second btn</button>
+    <script>
+
+    //using document.querySelector() we can get any element from the page put it inside our javascript
+    //innerHTML will control the html inside the element 
+      console.log(document.querySelector('button').innerHTML);
+       
+      // This only change the html inside the button 
+      document.querySelector('button').innerHTML='changed';
+
+ 
+
+     const buttonElement = document.querySelector('.btn2');
+     console.log(buttonElement);
+
+
+             
+        
+    /*
         console.log(document.title);
         //this is used to change the title of the website 
         document.title='title changed'
@@ -18,10 +35,14 @@
 
         console.log(document.body);  
         console.log(typeof document.body);
+        
 
         console.log(document.body.innerHTML);
+
         //innerHtml will change the content of html inside the body
         document.body.innerHTML='<button>Good job</button>'
+
+        */
 
 
         /*

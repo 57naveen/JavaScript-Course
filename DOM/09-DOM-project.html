@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PROJECTS</title>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subscirbe()"
+    class="js-subscribe-button"
+    >Subscribe</button>
+   <script>
+    function subscirbe()
+    {
+        const buttonElement= document.querySelector('.js-subscribe-button');
+        //innerText property is used to give the text inside this element
+        if(buttonElement.innerText === 'Subscribe')
+        {
+        buttonElement.innerHTML='Subscribed';
+        }else{
+        buttonElement.innerHTML='Subscribe';
+        }
+    }
+   </script>
+
+</body>
+</html>
