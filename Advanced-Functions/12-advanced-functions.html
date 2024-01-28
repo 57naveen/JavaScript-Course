@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>
+  <button  class="js-button">Click</button>
+ 
+    <script>
+      
+      /*
+      const buttonElement= document.querySelector('.js-button');
+
+      const eventListener =()=>
+      {
+        console.log('clicked')
+      };
+
+      buttonElement.addEventListener('click',eventListener);
+
+      buttonElement.removeEventListener('click',eventListener);
+
+      buttonElement.addEventListener('click',()=>
+      {
+        console.log('clicked 2')
+      });
+
+      */
+
+        /*----------------------Normal Function--------------------------------*/
+
+        // function greeting()
+        // {
+        //     console.log('hello');
+        // }
+
+        // greeting();
+
+       
+        /*-----------------------Save function inside the variable---------------------------------*/
+        // const function1 = function ()
+        // {
+        //     console.log('This is Anonymous funtion without function name ');
+        // };
+
+
+        // // console.log(function1);
+        // // console.log(typeof function1);
+
+        // //calling the function
+        // function1();
+
+     /*-----------------------Save functionn inside the object----------------------------------*/
+        // const object1={
+        //     num:2,
+        //     fun: function greeting()
+        //     {
+        //         console.log('function inside the variable');
+        //     }
+        // };
+
+        // object1.fun();
+
+
+        /*------------------------Pass value into a function-----------------------------------*/
+
+        // function display(param)
+        // {
+        //     console.log(param);
+        // }
+
+        // display(2);
+
+        /*---------------------Passing Function into another function----------------------------*/
+        
+        // function run(param)
+        // {
+        //      param();
+        // }
+        // run(function()
+        // {
+        //     console.log('hello3');
+        // });
+
+     /*---------------------setTimeout-----------------------------*/
+
+   //   setTimeout(function()
+   //   {
+   //      console.log('timeOut')
+   //   },3000);
+
+     /*-------------------------setInterval-----------------------------------*/
+   //   setInterval(function()
+   //   {
+   //      console.log('Interval');
+   //   },3000);
+
+
+   /*---------------Another way to loop through an array----------------------------------------------*/
+    //  [
+    //   'make dinner',
+    //   'wash dishes',
+    //   'watch youtube'
+    //  ].forEach((value,index)=>
+    //  {
+    //     // if value is 'wash dished' we are goimg to skip it
+    //     if(value === 'wash dishes') 
+    //     {
+    //       return;
+    //     }  
+
+    //      console.log(index);
+    //      console.log(value);
+    //  });
+
+    /*--------------------------Arrow Functions---------------------------------*/ 
+     
+    //  const arrowFunction = ()=>
+    //  {
+    //     console.log('This is arrow function');
+    //  };
+
+    //  arrowFunction();
+
+     /*---------------------------------------------*/
+
+    //  const arrowFunction2 = (param)=>
+    //  {
+    //     console.log(param);
+    //  };
+
+    //  arrowFunction2('This is passing param in the arrow function');
+
+     /*-----------------shortcut in arrowFunction------------------------*/
+     //When function have one parameter no need to use the bracket
+    //  const oneParam = param =>
+    //  {
+    //   console.log(param + 1);
+    //  }
+
+    //  oneParam(2);
+
+     /*-------------------------------------------------------*/
+    //when arrow function only has one line i like this,we can keep them on one line and bracket also optional and return statment also optional
+    //  const oneLine =() =>{ return 2 + 3;}
+    //  console.log(oneLine()) ; 
+     
+    //  //Another way if function has one line
+    //  const oneLine2=()=> 2+3;
+    //  console.log(oneLine2());
+
+   /*--------------------filter() method--------------------------*/
+    
+
+        
+        //filter the value based on the some conditionn
+        console.log([1,-2,5].filter((value,index)=>
+        {
+          /*
+              if(value>=0)
+              {
+                return true;
+              }
+              else{
+                return false;
+              }
+              */
+
+              return value >= 0;
+        }));
+
+   /*----------------------------Map() method-----------------------------*/     
+
+          //Map() = transform an array into another array based on the return value
+
+          console.log([1,1,3].map((value)=>
+          {
+              return value + 10;
+          }))
+
+
+          //another way to right this code
+          console.log([1,1,3].map((value)=>value + 10));
+
+        
+
+
+    </script>
+    
+</body>

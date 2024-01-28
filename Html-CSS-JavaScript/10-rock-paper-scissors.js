@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Rock Paper Scissors </title>
-</head>
-<body>
-
-    <h2>Rock Paper Scissors</h2>
-    <button onclick="playgame('Rock')">Rock</button>
-    <button onclick="playgame('Paper')">Paper</button>
-    <button onclick="playgame('Scissors')">Scissors</button>
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
-    <button onclick="
-    score.wins=0;
-    score.losses=0;
-    score.ties=0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-    ">Reset Score</button>
-
-<script>
-   
-
 
      //get the score from the loacl storage and stored in the value before storing converting the JSON string into object using JSON.parse()
      let score= JSON.parse(localStorage.getItem('score'));
@@ -112,7 +85,10 @@
 
              document.querySelector('.js-result').innerHTML=result;
 
-             document.querySelector('.js-moves').innerHTML=`You >> ${playerMove} - ${computerMove} << computer`;
+             document.querySelector('.js-moves').innerHTML=`You
+     <img src="/images/${playerMove}-emoji.png" class="move-icon">
+     <img src="/images/${computerMove}-emoji.png" class="move-icon">
+     Computer`;
       
             
       }
@@ -144,9 +120,3 @@
 
                   return computerMove;
                }
-
-         
-</script>
-
-</body>
-</html>
